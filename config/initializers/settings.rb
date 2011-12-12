@@ -1,3 +1,3 @@
-EMAILFROM = "Apple Store <applestore@apple.com>"
-REPLYTO = "applestore@apple.com"
-EMAILTOSCHEDULETEAM = "applestore@apple.com"
+EMAILFROM = "Company Store <employee@company.com>"
+REPLYTO = "employee@company.com"
+EMAILTOSCHEDULETEAM = "employee@company.com"
