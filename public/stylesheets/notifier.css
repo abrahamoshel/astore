@@ -1,0 +1,22 @@
+#content{
+  width:640px;
+  height: 600px;
+  background: transparent;
+  font-size: 16px;
+}
+h2{
+  font-size: 1.1em;
+  padding: 30px;
+  text-align: center;
+}
+p{
+  padding-left: 70px;
+}
+ul{
+  padding-left: 100px;
+}
+table{
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+td, tr{padding:0px; margin: 0px;}

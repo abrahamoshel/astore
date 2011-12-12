@@ -1,0 +1,23 @@
+embed_assets: off
+
+javascripts:
+  workspace:
+    - public/javascripts/jquery-ui-1.8.8.custom.min.js
+    - public/javascripts/jquery.tinyscrollbar.min.js 
+    - public/javascripts/views/**/*.js
+    - app/views/workspace/*.jst
+
+stylesheets:
+  common:
+    - public/stylesheets/reset-mina.css
+    - public/stylesheets/styles.css
+    #- public/stylesheets/formtastic.css
+    #- public/stylesheets/formtastic_changes.css
+    - public/stylesheets/jquery-ui-1.8.8.custom.css
+  workspace:
+    - public/stylesheets/blueprint/screen.css
+    - public/stylesheets/blueprint/plugins/buttons/screen.css
+    - public/stylesheets/scaffold.css
+  empty:
+    - public/stylesheets/pages/empty.css
+

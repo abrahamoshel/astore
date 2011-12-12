@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  firstName: MyString
+  lastName: MyString
+  email: MyString
+  firstStart: 2011-08-20
+  firstEnd: 2011-08-20
+  secondStart: 2011-08-20
+  secondEnd: 2011-08-20
+  thirdStart: 2011-08-20
+  thirdEnd: 2011-08-20
+
+two:
+  firstName: MyString
+  lastName: MyString
+  email: MyString
+  firstStart: 2011-08-20
+  firstEnd: 2011-08-20
+  secondStart: 2011-08-20
+  secondEnd: 2011-08-20
+  thirdStart: 2011-08-20
+  thirdEnd: 2011-08-20

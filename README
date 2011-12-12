@@ -1,0 +1,8 @@
+This app is being developed so that you can post a shift that needs
+to be covered at work and someone else can go and claim that shift to 
+take.
+
+Once the shift has been took than the appropriate people are emailed.
+One is always send to the person incharge of the schedule and two other
+emails are sent: one to the person that posted the shift and the other
+to the person that took the shift.

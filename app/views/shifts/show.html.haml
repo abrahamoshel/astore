@@ -1,0 +1,31 @@
+%h3.clear
+  #{@shift.firstName} #{@shift.lastName}'s Shift
+%ul.span-22
+  %li
+    Email:
+    = @shift.email
+  %li
+    Shift Type:
+    = @shift.shiftType
+  %li
+    Shift Date:
+    = @shift.date.strftime('%a, %B %d, %Y')
+  %li
+    Shift Hours:
+    #{@shift.starttime.strftime('%I:%M %p')} - #{@shift.endtime.strftime('%I:%M %p')}
+-if !@shift.takingEmail.nil?
+  %h3.clear Taker's Information
+  %ul.span-22
+    %li
+      Name:
+      #{@shift.takingFirstName} #{@shift.takingLastName}
+    %li
+      Email:
+      = @shift.takingEmail
+
+
+%p.span-22.clear
+  = link_to 'all shifts', shifts_path, :id => "back"
+  - if @shift.takingEmail.nil?
+    = link_to 'Take Shift', edit_shift_path(@shift), :class => 'button white'
+

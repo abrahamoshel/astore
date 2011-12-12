@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  email: MyString
+  date: 2011-01-14
+  starttime: 2011-01-14 23:48:49
+  endtime: 2011-01-14 23:48:49
+  takeingname: MyString
+  takingemail: MyString
+
+two:
+  name: MyString
+  email: MyString
+  date: 2011-01-14
+  starttime: 2011-01-14 23:48:49
+  endtime: 2011-01-14 23:48:49
+  takeingname: MyString
+  takingemail: MyString

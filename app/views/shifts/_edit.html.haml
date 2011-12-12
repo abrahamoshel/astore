@@ -1,0 +1,36 @@
+= semantic_form_for @shift do |f|
+  -if @shift.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@shift.errors.count, "error")} prohibited this holiday from being saved:"
+      - @shift.errors.full_messages.each do |msg|
+        %b= msg
+  %h3.clear
+    #{@shift.firstName} #{@shift.lastName}'s Shift
+  %ul.span-22
+    %li
+      Email:
+      = @shift.email
+    %li
+      Shift Type:
+      = @shift.shiftType
+    %li
+      Shift Date:
+      = @shift.date.strftime('%a, %B %d, %Y')
+    %li
+      Shift Hours:
+      #{@shift.starttime.strftime('%I:%M %p')} - #{@shift.endtime.strftime('%I:%M %p')}
+  %h3.clear Taker's Information
+  %ul.span-22
+    %li
+      = f.text_field :takingFirstName, :class => "title", :placeholder => "First Name"
+    %li
+      = f.text_field :takingLastName, :class => "title", :placeholder => "Last Name"
+    %li
+      = f.text_field :takingEmail, :class => "title", :placeholder => "Work Email"
+
+  .span-22.clear
+    - if params[:action] == 'new'
+      = f.submit "Post a Shift", :confirm => "Double check is the shift information correct?", :class => 'button white span-24'
+    - else
+      = f.submit "Take Shift", :confirm => "Are you sure you want to take this shift?", :class => 'button white span-24'
+

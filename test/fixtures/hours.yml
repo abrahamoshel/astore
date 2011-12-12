@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  request_id: 1
+  startDate: 2011-08-01
+  endDate: 2011-08-01
+  vacation: MyString
+  sick: MyString
+
+two:
+  request_id: 1
+  startDate: 2011-08-01
+  endDate: 2011-08-01
+  vacation: MyString
+  sick: MyString

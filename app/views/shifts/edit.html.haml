@@ -1,0 +1,5 @@
+//%hr.space
+//%h3.centered Looking at #{@shift.firstName} #{@shift.lastName} on #{@shift.date.strftime('%a, %B %d, %Y')} at #{@shift.starttime.strftime('%I:%M %p')} - #{@shift.endtime.strftime('%I:%M %p')}
+%p.span-22.clear
+  = link_to 'all shifts', shifts_path, :id => 'back'
+= render 'edit'

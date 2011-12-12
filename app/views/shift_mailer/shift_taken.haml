@@ -1,0 +1,35 @@
+%html
+  %head
+    %meta{'http-equiv' => 'Content-Type', :content => "text/html; charset=utf-8"}
+    %style{'type' => 'text/css'}
+      = @css
+    
+  %body
+    %table{'style' => 'border-collapse:separate; border-spacing: 0px; display:inline; border:0px; cellpadding:0px; border: 1px solid #CCC; border-radius: 20px; padding: 10px;'}
+      %tr{:border => 0, :cellpadding => 0}
+        %td{:colspan => 3, :border => 0, :cellpadding => 0}
+          = image_tag attachments['scheduleTeam.png'].url, :style => "display:block; border:0"
+
+      %tr
+        %td{:width => '43px'}
+        %td{:width => '480px'}
+          %h2 Give One, Take One has just completed a shift switch
+          %p 
+            %strong #{@shift.takingFirstName} #{@shift.takingLastName} 
+            just took 
+            %strong #{@shift.firstName} #{@shift.lastName} 
+            shift for
+            %strong #{@shift.shiftType} 
+            %br/ 
+            on #{@shift.date.strftime('%a, %B %d, %Y')} at #{@shift.starttime.strftime('%I:%M %p')} - #{@shift.endtime.strftime('%I:%M %p')}
+          %p
+            An Email has already been sent to:
+            %ul
+              %li NMA Schedule - nmaschedule@apple.com
+              %li #{@shift.takingFirstName} #{@shift.takingLastName} - #{@shift.takingEmail}
+              %li  #{@shift.firstName} #{@shift.lastName} - #{@shift.email}
+
+        %td{:width => '40px'}
+      %tr
+        %td{:colspan => 3}
+    

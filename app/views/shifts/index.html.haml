@@ -1,0 +1,44 @@
+%p.span-22= link_to 'Give a New Shift', new_shift_path, :class => "button white"
+%h3.clear Open Shifts
+%br
+%table.span-22
+  %thead
+    %tr.span-24
+      %th.evens Name
+      %th.evens Shift Type
+      %th.evens Date
+      %th.evens Time
+      %th.evens Taker's Name
+      %th.evens
+
+ 
+  - @shifts.each do |f|
+    %tr.span-24
+      %td.evens #{f.firstName} #{f.lastName}
+      %td.evens= f.shiftType
+      %td.evens= f.date.strftime('%a, %b %d, %Y')
+      %td.evens #{f.starttime.strftime('%I:%M %p')} - #{f.endtime.strftime('%I:%M %p')}
+      %td.evens #{f.takingFirstName} #{f.takingLastName}
+      %td.action.evens
+        = link_to 'take', edit_shift_path(f), :class => 'button white'
+%h3.clear Taken Shifts
+%br
+%table.span-22
+  %thead
+    %tr.span-24
+      %th.evens Name
+      %th.evens Shift Type
+      %th.evens Date
+      %th.evens Time
+      %th.evens Taker's Name
+      %th.evens
+    - @shiftscovered.each do |f|
+      - if !f.takingEmail.nil?
+        %tr.span-24
+          %td.evens #{f.firstName} #{f.lastName}
+          %td.evens= f.shiftType
+          %td.evens= f.date.strftime('%a, %b %d, %Y')
+          %td.evens #{f.starttime.strftime('%I:%M %p')} - #{f.endtime.strftime('%I:%M %p')}
+          %td.evens #{f.takingFirstName} #{f.takingLastName}
+          %td.action.evens
+            = link_to 'view', shift_path(f), :class => 'button white'
