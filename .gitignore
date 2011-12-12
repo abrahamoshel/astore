@@ -1,1 +1,9 @@
-
+.bundle
+db/*.sqlite3
+log/*.log
+tmp/**/*
+*.swp
+.DS_Store
+onfig/.DS_Store
+public/stylesheets/.DS_Store
+.com.apple.timemachine.supported
